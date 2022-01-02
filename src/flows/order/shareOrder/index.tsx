@@ -1,7 +1,6 @@
 import { ETH_ADDRESS } from 'airswap.js/src/constants'
 import React, { useContext, useEffect, useState } from 'react'
 import { FormattedMessage, injectIntl } from 'react-intl'
-import { withRouter } from 'react-router-dom'
 
 import { ModalContext, ModalPosition } from '../../../app/context/ModalContext'
 import { WidgetContext } from '../../../app/context/WidgetContext'

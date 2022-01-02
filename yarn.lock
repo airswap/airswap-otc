@@ -2365,10 +2365,10 @@ aes-js@3.0.0:
   resolved "https://registry.yarnpkg.com/aes-js/-/aes-js-3.0.0.tgz#e21df10ad6c2053295bcbb8dab40b09dbea87e4d"
   integrity sha1-4h3xCtbCBTKVvLuNq0Cwnb6ofk0=
 
-airswap.js@0.2.16:
-  version "0.2.16"
-  resolved "https://registry.yarnpkg.com/airswap.js/-/airswap.js-0.2.16.tgz#0ef6a9593619b87ca0705cb02761802bacda86c6"
-  integrity sha512-mMmPOXBxkLeA50M/Ebk4mDhhOEKBjZyChBoh4+WejxDXAeIjk3zCyAwIY3rDUavz7gL5o3p9K9mmhzbbBWfJww==
+airswap.js@0.2.19:
+  version "0.2.19"
+  resolved "https://registry.yarnpkg.com/airswap.js/-/airswap.js-0.2.19.tgz#78a2db63e6f82fc357e89dd0e37ee7a651b64c77"
+  integrity sha512-VBAn5+89KndA7wokYQ73WhnyN2MOlL+zRxb14b0nj+6BKZDMO0ETP6pLi6mWXUtLRVxrF5MGLOXEjzf4RU+Pyw==
   dependencies:
     "@airswap/constants" "^0.3.9"
     "@airswap/delegate" "^2.6.9"

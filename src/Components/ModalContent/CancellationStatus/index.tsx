@@ -15,7 +15,7 @@ import { ReactComponent as CloseIcon } from '../../../static/close-icon.svg'
 import { ReactComponent as TrashIcon } from '../../../static/dumpster-icon.svg'
 import { ReactComponent as ErrorIcon } from '../../../static/wallet-connect-error-icon.svg'
 import theme from '../../../theme'
-import { isMobile, redirectWithParam } from '../../../utils/helpers'
+import { isMobile, redirectWithCID } from '../../../utils/helpers'
 import ActionStatus from '../ActionStatus'
 import { IconContainer } from '../styles'
 import { Close, ModalContainer } from '../WalletConnectionStatus/styles'
@@ -91,7 +91,7 @@ function CancellationStatusModal(props: CancellationStatusProps) {
         setTimeout(
           async () => {
             await setModalOpen(false)
-            redirectWithParam(props.orderCID, props.history)
+            redirectWithCID(props.orderCID)
           },
           isMobile() ? 0 : 1000,
         )

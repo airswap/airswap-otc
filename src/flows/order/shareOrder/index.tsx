@@ -15,7 +15,7 @@ import Tooltip from '../../../elements/Tooltip'
 import { H1, H4, H5, H6, H7 } from '../../../elements/Typography'
 import theme from '../../../theme'
 import { TokenKind, TokenKindInterfaceMap, TokenMetadata } from '../../../types/models/Tokens'
-import { getShareUrl, redirectWithParam } from '../../../utils/helpers'
+import { getShareUrl, redirectWithCID } from '../../../utils/helpers'
 import { formatExpirationFromDate } from '../../../utils/numbers'
 import {
   condenseAddress,
@@ -61,7 +61,7 @@ function OrderSummary(props: OrderSummaryProps & OrderSummaryDispatchProps) {
   const showCancellationModal = () => {
     if (expirationString === 'Expired') return
 
-    setModalContent(<CancellationStatus signedOrder={props.order} orderCID={props.match.params.orderCID} />)
+    setModalContent(<CancellationStatus signedOrder={props.order} orderCID={props.orderCID} />)
     setModalSettings({ canDismiss: true, mobilePosition: ModalPosition.BOTTOM })
     setModalOpen(true)
   }
@@ -108,7 +108,7 @@ function OrderSummary(props: OrderSummaryProps & OrderSummaryDispatchProps) {
     }
 
     setExpirationString(formatExpirationFromDate(props.order.expiry || 0))
-    setOrderUrl(getShareUrl(props.match.params.orderCID || widgetParams.cid, widgetParams))
+    setOrderUrl(getShareUrl(props.orderCID || widgetParams.cid, widgetParams))
   }, [JSON.stringify(props.order), props.getDisplayByToken, Object.keys(props.tokensByAddress).length])
 
   useInterval(() => {
@@ -147,7 +147,7 @@ function OrderSummary(props: OrderSummaryProps & OrderSummaryDispatchProps) {
   }
 
   const onCreateNewOrderClick = () => {
-    redirectWithParam(null, props.history)
+    redirectWithCID(null)
   }
 
   const isExpired = expirationString === 'Expired'
@@ -160,7 +160,7 @@ function OrderSummary(props: OrderSummaryProps & OrderSummaryDispatchProps) {
     : undefined
 
   return (
-    <OrderSummaryContainer color={widgetPrimaryColor} data-test="share-order" data-cid={props.match.params.orderCID}>
+    <OrderSummaryContainer color={widgetPrimaryColor} data-test="share-order" data-cid={props.orderCID}>
       <TopContainer color={widgetPrimaryColor} justify="center">
         <H1 color="white" weight={theme.text.fontWeight.medium}>
           {isExpired ? (
@@ -318,4 +318,4 @@ function OrderSummary(props: OrderSummaryProps & OrderSummaryDispatchProps) {
   )
 }
 
-export default Container(withRouter(injectIntl(OrderSummary)))
+export default Container(injectIntl(OrderSummary))

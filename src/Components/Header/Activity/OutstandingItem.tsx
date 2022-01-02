@@ -10,7 +10,7 @@ import { H6, H7 } from '../../../elements/Typography'
 import { ReactComponent as CopyIcon } from '../../../static/copy-icon.svg'
 import theme from '../../../theme'
 import { SignedSimpleSwapOrderType } from '../../../types/models/Orders'
-import { getShareUrl, redirectWithParam } from '../../../utils/helpers'
+import { getShareUrl, redirectWithCID } from '../../../utils/helpers'
 import { formatExpirationFromDate } from '../../../utils/numbers'
 import { copyToClipboard, getFormattedTokenDisplay } from '../../../utils/transformations'
 import useInterval from '../../../utils/useInterval'
@@ -126,7 +126,7 @@ function OutstandingItem(props: OutstandingItemProps) {
   }
 
   const navigateToOrder = () => {
-    redirectWithParam(props.orderCID, props.history)
+    redirectWithCID(props.orderCID)
     props.setIsOpen(false)
   }
 

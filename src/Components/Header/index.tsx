@@ -15,7 +15,7 @@ import { ReactComponent as AirswapLogo } from '../../static/airswap-logo.svg'
 import { ReactComponent as ExplorerIcon } from '../../static/explorer-icon.svg'
 import { ReactComponent as InboxIcon } from '../../static/inbox-icon.svg'
 import { ReactComponent as MoreHorizontalIcon } from '../../static/more-horizontal-icon.svg'
-import { redirectWithParam } from '../../utils/helpers'
+import { redirectWithCID } from '../../utils/helpers'
 import Activity from './Activity'
 import Container, { HeaderProps } from './Container'
 import Menu from './Menu'
@@ -64,7 +64,7 @@ function Header(props: HeaderProps) {
     setIsFormSubmitting(false)
 
     setShowWalletConnect(false)
-    redirectWithParam(null, props.history)
+    redirectWithCID(null)
   }
 
   return (

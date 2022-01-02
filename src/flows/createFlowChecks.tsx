@@ -3,8 +3,8 @@ import { Order } from '@airswap/types'
 import {
   ETH_ADDRESS,
   NETWORK,
-  OTC_AFFILIATE_ADDRESS,
   SWAP_CONTRACT_ADDRESS,
+  TRADER_AFFILIATE_ADDRESS,
   WETH_CONTRACT_ADDRESS,
 } from 'airswap.js/src/constants'
 import { selectors as balancesSelectors } from 'airswap.js/src/deltaBalances/redux'
@@ -273,7 +273,7 @@ export default function createFlowChecks() {
         id: order.takerId,
       },
       affiliate: {
-        wallet: OTC_AFFILIATE_ADDRESS,
+        wallet: TRADER_AFFILIATE_ADDRESS,
         token: ETH_ADDRESS,
         amount: '0',
         id: '0',
@@ -290,7 +290,7 @@ export default function createFlowChecks() {
         v: order.signatureV,
       },
     }
-    const { network } = queryString.parse(window.location.hash)
+    const { network } = queryString.parse(window.location.hash.slice(1))
     const validator = new Validator(network || NETWORK)
     const failureCodes = await validator.checkSwap(formattedOrder)
     if (failureCodes && failureCodes.length) {

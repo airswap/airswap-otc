@@ -1,8 +1,8 @@
 import {
   DAI_CONTRACT_ADDRESS,
   ETH_ADDRESS,
-  OTC_AFFILIATE_ADDRESS,
   SWAP_CONTRACT_ADDRESS,
+  TRADER_AFFILIATE_ADDRESS,
   WETH_CONTRACT_ADDRESS,
 } from 'airswap.js/src/constants'
 import { ipfsStoreJSON } from 'airswap.js/src/ipfs'
@@ -23,7 +23,7 @@ import {
 import Card from '../../elements/Card'
 import { SignedSimpleSwapOrderType } from '../../types/models/Orders'
 import { TokenKind, TokenKindInterfaceMap } from '../../types/models/Tokens'
-import { getExpirationFromMinutes, redirectWithParam } from '../../utils/helpers'
+import { getExpirationFromMinutes, redirectWithCID } from '../../utils/helpers'
 import { ExpirationType } from '../../utils/numbers'
 import { isERC20 } from '../../utils/tokens'
 import createFlowChecks from '../createFlowChecks'
@@ -404,7 +404,7 @@ function MakerOrderCard(props: MakerOrderCardProps) {
             kind: TokenKindInterfaceMap[takerTokenKind],
           },
           affiliate: {
-            wallet: OTC_AFFILIATE_ADDRESS,
+            wallet: TRADER_AFFILIATE_ADDRESS,
             token: ETH_ADDRESS,
             amount: '0',
             id: '0',
@@ -465,7 +465,7 @@ function MakerOrderCard(props: MakerOrderCardProps) {
               widgetParams.onCreate(nestedSignedOrder, orderCID)
             }
 
-            redirectWithParam(orderCID, props.history)
+            redirectWithCID(orderCID)
           } catch (e) {
             console.warn(`Failed to sign order: ${e}`)
             setIsFormSubmitting(false)

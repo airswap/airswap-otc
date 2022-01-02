@@ -48,14 +48,14 @@ export const getIsValidSignedOrder = ({
 
 export const isMobile = () => ismobilejs.isMobile(navigator.userAgent).any || window.innerWidth < 800
 
-export const redirectWithParam = (cid, history) => {
+export const redirectWithCID = cid => {
   const queryParams = queryString.parse(window.location.hash.slice(1))
   if (!cid) {
     delete queryParams.cid
   } else {
     queryParams.cid = cid
   }
-  history.push(`#${queryString.stringify(queryParams)}`)
+  window.location.hash = `#${queryString.stringify(queryParams)}`
 }
 
 export const getShareUrl = (cid, widgetParams?) => {

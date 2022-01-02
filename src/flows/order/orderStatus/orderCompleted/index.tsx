@@ -23,7 +23,7 @@ import { H1, H4, H5, H6, H7 } from '../../../../elements/Typography'
 import { ReactComponent as ArrowRightIcon } from '../../../../static/arrow-right-icon.svg'
 import theme from '../../../../theme'
 import { TokenKind, TokenKindInterfaceMap, TokenMetadata } from '../../../../types/models/Tokens'
-import { isMobile, redirectWithParam } from '../../../../utils/helpers'
+import { isMobile, redirectWithCID } from '../../../../utils/helpers'
 import {
   condenseAddress,
   getFormattedNumber,
@@ -68,7 +68,7 @@ function OrderCompleted(props: Props) {
   const onCreateNewOrderClick = () => {
     setShouldProgress(false)
     setIsFormSubmitting(false)
-    redirectWithParam(null, props.history)
+    redirectWithCID(null)
   }
 
   const unwrap = () => {

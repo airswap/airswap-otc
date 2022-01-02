@@ -16,7 +16,7 @@ import { H1, H4, H5, H6 } from '../../../../elements/Typography'
 import { ReactComponent as ArrowRightIcon } from '../../../../static/arrow-right-icon.svg'
 import theme from '../../../../theme'
 import { TokenKind, TokenKindInterfaceMap, TokenMetadata } from '../../../../types/models/Tokens'
-import { redirectWithParam } from '../../../../utils/helpers'
+import { redirectWithCID } from '../../../../utils/helpers'
 import { condenseAddress, getFormattedTokenDisplay } from '../../../../utils/transformations'
 import Container, { Props } from './Container'
 import {
@@ -47,7 +47,7 @@ function OrderCancelled(props: Props) {
   const { isWidget, widgetParams } = useContext(WidgetContext)
 
   const onCreateNewOrderClick = () => {
-    redirectWithParam(null, props.history)
+    redirectWithCID(null)
   }
 
   useEffect(() => {

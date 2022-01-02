@@ -1,7 +1,7 @@
 import { selectors as tokenSelectors } from 'airswap.js/src/tokens/redux'
 import { selectors as walletSelectors } from 'airswap.js/src/wallet/redux/reducers'
+import queryString from 'querystring'
 import { connect } from 'react-redux'
-import { RouteComponentProps } from 'react-router-dom'
 
 import { addOutstandingMakerOrder } from '../../../state/orders/actions'
 import { getCurrentOrder } from '../../../state/orders/reducers'
@@ -12,15 +12,12 @@ import { TokenMetadata, TokenQuery } from '../../../types/models/Tokens'
 const { getConnectedWalletAddress } = walletSelectors
 const { getTokensByAddress, makeDisplayByToken } = tokenSelectors
 
-interface OrderRouteProps {
-  orderCID: string
-}
-
-export interface OrderSummaryProps extends RouteComponentProps<OrderRouteProps>, IntlObject {
+export interface OrderSummaryProps extends IntlObject {
   getDisplayByToken(tokenQuery: TokenQuery, tokenAmount: string): string
   tokensByAddress: Record<string, TokenMetadata>[]
   connectedWalletAddress: string
   order: SignedSimpleSwapOrderType
+  orderCID: string
 }
 
 export interface OrderSummaryDispatchProps {
@@ -28,11 +25,13 @@ export interface OrderSummaryDispatchProps {
 }
 
 const mapStateToProps = (state: any, ownProps): OrderSummaryProps => {
+  const queryParams = queryString.parse(window.location.hash.slice(1))
   return {
     getDisplayByToken: makeDisplayByToken(state),
     tokensByAddress: getTokensByAddress(state),
     connectedWalletAddress: getConnectedWalletAddress(state),
     order: getCurrentOrder(state),
+    orderCID: queryParams.cid,
     ...ownProps,
   }
 }

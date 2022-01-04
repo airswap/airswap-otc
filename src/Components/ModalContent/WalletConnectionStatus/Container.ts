@@ -1,11 +1,8 @@
 import { selectors as balancesSelectors } from 'airswap.js/src/deltaBalances/redux'
-import { selectors as protocolMessagingSelectors } from 'airswap.js/src/protocolMessaging/redux/reducers'
 import { selectors as walletSelectors } from 'airswap.js/src/wallet/redux/reducers'
 import { connect } from 'react-redux'
 
 import { IntlObject } from '../../../types/LocaleTypes'
-
-const { getIsConnectingRouter } = protocolMessagingSelectors
 
 const {
   getIsWalletConnecting,
@@ -45,7 +42,6 @@ const mapStateToProps = (state: any, ownProps) => {
     isWalletSigning,
     isWalletDoingHandshake,
     isWalletConnecting: getIsWalletConnecting(state),
-    isConnectingRouter: getIsConnectingRouter(state),
     availableWallets: getAvailableWalletState(state),
     connectedWalletAddress: getConnectedWalletAddress(state),
     walletConnectionError: getWalletConnectionError(state),

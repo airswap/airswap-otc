@@ -16,7 +16,7 @@ jobs:
       - name: Install and Build 🔧
         run: |
           yarn
-          yarn build:production
+          REACT_APP_NAME='AirSwap OTC' REACT_APP_ETH_NODE_HTTP=${{ secrets.REACT_APP_ETH_NODE_HTTP }} REACT_APP_ETH_NODE_WEBSOCKET=${{ secrets.REACT_APP_ETH_NODE_WEBSOCKET }} yarn build:production
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:

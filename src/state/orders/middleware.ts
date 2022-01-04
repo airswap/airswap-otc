@@ -25,25 +25,23 @@ async function dispatchHistoricalSwapsForOrder(action, store) {
   try {
     const signedOrder = flatten(mapNested22OrderTo20Order(await ipfsFetchJSONFromCID(queryParams.cid)))
 
-    // Crawl token metadata in development
-    if (ENV === 'development') {
-      store
-        .dispatch(
-          waitForState({
-            selector: areTokensReady,
-            result: true,
-          }),
-        )
-        .then(() => {
-          const tokens = getTokensByAddress(store.getState())
-          if (!tokens[signedOrder.makerToken]) {
-            store.dispatch(crawlToken(signedOrder.makerToken))
-          }
-          if (!tokens[signedOrder.takerToken]) {
-            store.dispatch(crawlToken(signedOrder.takerToken))
-          }
-        })
-    }
+    store
+      .dispatch(
+        waitForState({
+          selector: areTokensReady,
+          result: true,
+        }),
+      )
+      .then(() => {
+        const tokens = getTokensByAddress(store.getState())
+        if (!tokens[signedOrder.makerToken]) {
+          store.dispatch(crawlToken(signedOrder.makerToken))
+        }
+        if (!tokens[signedOrder.takerToken]) {
+          store.dispatch(crawlToken(signedOrder.takerToken))
+        }
+      })
+
     store.dispatch(addTrackedAddress({ address: signedOrder.makerWallet, tokenAddress: signedOrder.makerToken }))
     if (signedOrder.takerWallet !== ETH_ADDRESS) {
       store.dispatch(addTrackedAddress({ address: signedOrder.takerWallet, tokenAddress: signedOrder.takerToken }))

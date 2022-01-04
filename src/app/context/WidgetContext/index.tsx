@@ -157,7 +157,7 @@ function WidgetContextProvider(props: WidgetContextProps) {
     setWidgetParams(Object.assign({}, defaultWidgetParams, xprops))
 
     // Set network
-    const query = queryString.parse(window.location.hash)
+    const query = queryString.parse(window.location.hash.slice(1))
     if (xprops && xprops.chainId && !query.network) {
       query.network = `${xprops.chainId}`
       window.location.hash = `#${queryString.stringify(query)}`

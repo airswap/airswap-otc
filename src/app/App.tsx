@@ -45,7 +45,7 @@ export default function App() {
     }
   }
 
-  const query = queryString.parse(window.location.hash)
+  const query = queryString.parse(window.location.hash.slice(1))
 
   // ////////// //
   //   Render   //

@@ -3561,7 +3561,16 @@ bech32@1.1.4:
   resolved "https://registry.yarnpkg.com/bech32/-/bech32-1.1.4.tgz#e38c9f37bf179b8eb16ae3a772b40c356d4832e9"
   integrity sha512-s0IrSOzLlbvX7yp4WBfPITzpAU8sqQcpsmwXDiKwrG4r491vwCO/XpejasRNl0piBMe/DvP4Tz0mIS/X1DPJBQ==
 
-belter@^1.0.41, belter@^1.0.87:
+belter@^1.0.123:
+  version "1.0.177"
+  resolved "https://registry.yarnpkg.com/belter/-/belter-1.0.177.tgz#4d49b6a7797c19a12eed233f408934964b808e49"
+  integrity sha512-oJCyvKkO6Cz+ocjEVdyYe6itIgcgS+AgONrEVexErIfFx6y4Q8Uv5699mvMkTWLY5wR72BXoCYZFkb17xJ/7dA==
+  dependencies:
+    cross-domain-safe-weakmap "^1"
+    cross-domain-utils "^2"
+    zalgo-promise "^1"
+
+belter@^1.0.41:
   version "1.0.120"
   resolved "https://registry.yarnpkg.com/belter/-/belter-1.0.120.tgz#91499301b543b983c81bf12a9edd33e8ed30774b"
   integrity sha512-n9y+gNmacueLY8+aR/AVu5KxqzoHlrgR5pr24n81KYlqzMsLlRJipi993HBiUgkX7g6W1Zt91DaPozaqbnyKKw==
@@ -4695,6 +4704,13 @@ create-react-class@^15.6.2:
     loose-envify "^1.3.1"
     object-assign "^4.1.1"
 
+cross-domain-safe-weakmap@^1:
+  version "1.0.29"
+  resolved "https://registry.yarnpkg.com/cross-domain-safe-weakmap/-/cross-domain-safe-weakmap-1.0.29.tgz#0847975c27d9e1cc840f24c1745311958df98022"
+  integrity sha512-VLoUgf2SXnf3+na8NfeUFV59TRZkIJqCIATaMdbhccgtnTlSnHXkyTRwokngEGYdQXx8JbHT9GDYitgR2sdjuA==
+  dependencies:
+    cross-domain-utils "^2.0.0"
+
 cross-domain-safe-weakmap@^1.0.1, cross-domain-safe-weakmap@^1.0.20:
   version "1.0.27"
   resolved "https://registry.yarnpkg.com/cross-domain-safe-weakmap/-/cross-domain-safe-weakmap-1.0.27.tgz#81a5eae012b3cfb7e7e5ca3d737a6c94c3499bab"
@@ -4702,7 +4718,14 @@ cross-domain-safe-weakmap@^1.0.1, cross-domain-safe-weakmap@^1.0.20:
   dependencies:
     cross-domain-utils "^2.0.0"
 
-cross-domain-utils@^2.0.0, cross-domain-utils@^2.0.10, cross-domain-utils@^2.0.3:
+cross-domain-utils@^2, cross-domain-utils@^2.0.33:
+  version "2.0.38"
+  resolved "https://registry.yarnpkg.com/cross-domain-utils/-/cross-domain-utils-2.0.38.tgz#2eaf321c4dfdb61596805ca4233fde4400cb6377"
+  integrity sha512-zZfi3+2EIR9l4chrEiXI2xFleyacsJf8YMLR1eJ0Veb5FTMXeJ3DpxDjZkto2FhL/g717WSELqbptNSo85UJDw==
+  dependencies:
+    zalgo-promise "^1.0.11"
+
+cross-domain-utils@^2.0.0, cross-domain-utils@^2.0.10:
   version "2.0.32"
   resolved "https://registry.yarnpkg.com/cross-domain-utils/-/cross-domain-utils-2.0.32.tgz#e2e5ec828f7a278c72e53c969993f8b32f974e7d"
   integrity sha512-3qwXBJxVuctEcH6jg0MkFCyIYq6ta+x1OVlCmBrtJxlPGtdRqn0zV4Z0SfZaxzX3QBLAeiwWS8FKPQZ5ihWPxw==
@@ -12886,15 +12909,14 @@ react-dev-utils@^7.0.1:
     strip-ansi "5.0.0"
     text-table "0.2.0"
 
-react-dom@^16.8.6:
-  version "16.13.1"
-  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.13.1.tgz#c1bd37331a0486c078ee54c4740720993b2e0e7f"
-  integrity sha512-81PIMmVLnCNLO/fFOQxdQkvEq/+Hfpv24XNJfpyZhTRfO0QcmQIF/PgCa1zCOj2w1hrn12MFLyaJ/G0+Mxtfag==
+react-dom@^17.0.2:
+  version "17.0.2"
+  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-17.0.2.tgz#ecffb6845e3ad8dbfcdc498f0d0a939736502c23"
+  integrity sha512-s4h96KtLDUQlsENhMn1ar8t2bEa+q/YAtj8pPPdIjPDGBDIVNsrD9aXNWqspUe6AzKCIG0C1HZZLqLV7qpOBGA==
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
-    prop-types "^15.6.2"
-    scheduler "^0.19.1"
+    scheduler "^0.20.2"
 
 react-error-overlay@^5.1.4:
   version "5.1.6"
@@ -13091,14 +13113,13 @@ react-window@^1.8.5:
     "@babel/runtime" "^7.0.0"
     memoize-one ">=3.1.1 <6"
 
-react@^16.8.6:
-  version "16.13.1"
-  resolved "https://registry.yarnpkg.com/react/-/react-16.13.1.tgz#2e818822f1a9743122c063d6410d85c1e3afe48e"
-  integrity sha512-YMZQQq32xHLX0bz5Mnibv1/LHb3Sqzngu7xstSM+vrkE5Kzr9xE0yMByK5kMoTK30YVJE61WfbxIFFvfeDKT1w==
+react@^17.0.2:
+  version "17.0.2"
+  resolved "https://registry.yarnpkg.com/react/-/react-17.0.2.tgz#d0b5cc516d29eb3eee383f75b62864cfb6800037"
+  integrity sha512-gnhPt75i/dq/z3/6q/0asP78D0u592D5L1pd7M8P+dck6Fu/jJeL6iVVK23fptSUZj8Vjf++7wXA8UNclGQcbA==
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
-    prop-types "^15.6.2"
 
 read-babelrc-up@^0.3.1:
   version "0.3.1"
@@ -13851,6 +13872,14 @@ scheduler@^0.19.1:
   version "0.19.1"
   resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.19.1.tgz#4f3e2ed2c1a7d65681f4c854fa8c5a1ccb40f196"
   integrity sha512-n/zwRWRYSUj0/3g/otKDRPMh6qv2SYMWNq85IEa8iZyAv8od9zDYpGSnpBEjNgcMNq6Scbu5KfIPxNF72R/2EA==
+  dependencies:
+    loose-envify "^1.1.0"
+    object-assign "^4.1.1"
+
+scheduler@^0.20.2:
+  version "0.20.2"
+  resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.20.2.tgz#4baee39436e34aa93b4874bddcbf0fe8b8b50e91"
+  integrity sha512-2eWfGgAqqWFGqtdMmcL5zCMK1U8KlXv8SQFGglL3CEtd0aDVDWgeF/YoCmvln55m5zSk3J/20hTaSBeSObsQDQ==
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
@@ -17096,17 +17125,22 @@ yauzl@^2.4.2:
     buffer-crc32 "~0.2.3"
     fd-slicer "~1.1.0"
 
-zalgo-promise@^1.0.11, zalgo-promise@^1.0.22, zalgo-promise@^1.0.28, zalgo-promise@^1.0.3:
+zalgo-promise@^1, zalgo-promise@^1.0.45:
+  version "1.0.48"
+  resolved "https://registry.yarnpkg.com/zalgo-promise/-/zalgo-promise-1.0.48.tgz#9e33eef502d5ed9f5a09fc5728c833c3e87afa2e"
+  integrity sha512-LLHANmdm53+MucY9aOFIggzYtUdkSBFxUsy4glTTQYNyK6B3uCPWTbfiGvSrEvLojw0mSzyFJ1/RRLv+QMNdzQ==
+
+zalgo-promise@^1.0.11, zalgo-promise@^1.0.28, zalgo-promise@^1.0.3:
   version "1.0.44"
   resolved "https://registry.yarnpkg.com/zalgo-promise/-/zalgo-promise-1.0.44.tgz#10b6888def701abc0681ec760d73e2bfd2448ae2"
   integrity sha512-CSQ1xh0vVwgrohObNdysPANonBV+3yl1Xy+qrtMWBvb/a0D/2OUNqb0GJvaAgGtP/gQawtiQAFil2bGSq8aoMA==
 
-zoid@^9.0.42:
-  version "9.0.42"
-  resolved "https://registry.yarnpkg.com/zoid/-/zoid-9.0.42.tgz#9943c966aea190089584be0d260ec4dedb652af6"
-  integrity sha512-QLdWPBOP4yTWhffuR+ASerGrpapLXqlgCkH+fW9ud5biwGgJ6IsOr4BjgdvkRHFuuTaPtMB/mVtWxa2LAJ+WDQ==
+zoid@^9.0.85:
+  version "9.0.85"
+  resolved "https://registry.yarnpkg.com/zoid/-/zoid-9.0.85.tgz#571e7955ee8204da5a0c2853942122a6d63b224b"
+  integrity sha512-fM9Hht/OtA6RvJeNvtwP5IEh5paf5C9TFe+1H1eroZNvwvmO3T5kSTfv7LRaO+o2zcOGZLfN2TZA6SqNXU/gJw==
   dependencies:
-    belter "^1.0.87"
-    cross-domain-utils "^2.0.3"
+    belter "^1.0.123"
+    cross-domain-utils "^2.0.33"
     post-robot "^10"
-    zalgo-promise "^1.0.22"
+    zalgo-promise "^1.0.45"

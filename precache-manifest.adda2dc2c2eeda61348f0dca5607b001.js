@@ -4,8 +4,8 @@ self.__precacheManifest = [
     "url": "/static/media/chevron-right-icon.be2119b8.svg"
   },
   {
-    "revision": "3d8b8ec21ffb213b1d9a",
-    "url": "/static/js/main.3d8b8ec2.chunk.js"
+    "revision": "a484f02a9cf229de6b33",
+    "url": "/static/js/main.a484f02a.chunk.js"
   },
   {
     "revision": "229c360febb4351a89df",
@@ -180,7 +180,7 @@ self.__precacheManifest = [
     "url": "/static/js/1.62561a5f.chunk.js"
   },
   {
-    "revision": "4597bf20b829b8c0427d8fdafe704f63",
+    "revision": "06eeddb9144b12f0cb69eeaedb1e6254",
     "url": "/index.html"
   }
 ];

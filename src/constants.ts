@@ -11,7 +11,7 @@ export const WALLET_LEARN_MORE_LINKS = {
   PORTIS: 'https://www.portis.io/',
 }
 
-export const PRODUCTION_HOSTNAME = 'otc.airswap.io'
+export const PRODUCTION_HOSTNAME = 'trader.airswap.io'
 
 export const GIT_SHA = process.env.REACT_APP_GIT_SHA1
 

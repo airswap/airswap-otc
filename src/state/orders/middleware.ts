@@ -1,4 +1,4 @@
-import { ENV, ETH_ADDRESS } from 'airswap.js/src/constants'
+import { ETH_ADDRESS } from 'airswap.js/src/constants'
 import { addTrackedAddress } from 'airswap.js/src/deltaBalances/redux/actions'
 import {
   fetchHistoricalSwapCancelsByMakerAddress,

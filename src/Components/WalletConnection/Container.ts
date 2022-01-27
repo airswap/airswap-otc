@@ -1,7 +1,6 @@
 import { selectors as balancesSelectors } from 'airswap.js/src/deltaBalances/redux'
 import {
   initEqual,
-  initFortmatic,
   initLedger,
   initMetamask,
   initMobileWallet,
@@ -19,7 +18,6 @@ export interface WalletContainerProps {
   initEqual(): void
   initLedger(): void
   initPortis(): void
-  initFortmatic(): void
   initMobileWallet(): void
 }
 
@@ -34,7 +32,6 @@ const mapDispatchToProps = {
   initEqual,
   initLedger,
   initPortis,
-  initFortmatic,
   initMobileWallet,
 }
 

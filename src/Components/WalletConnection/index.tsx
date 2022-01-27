@@ -12,7 +12,6 @@ import { H7 } from '../../elements/Typography'
 import { ReactComponent as ArrowLeftIcon } from '../../static/arrow-left-icon.svg'
 import { ReactComponent as CoinbaseLogo } from '../../static/coinbase-logo.svg'
 import { ReactComponent as EqualLogo } from '../../static/equal-logo.svg'
-import { ReactComponent as FortmaticLogo } from '../../static/fortmatic-logo.svg'
 import { ReactComponent as LedgerMetamaskLogo } from '../../static/ledger-metamask-logo.svg'
 import { ReactComponent as MetaMaskLogo } from '../../static/metamask-logo.svg'
 import { ReactComponent as PortisLogo } from '../../static/portis-logo.svg'
@@ -61,11 +60,6 @@ function WalletConnection(props: WalletContainerProps) {
 
   const initPortis = () => {
     props.initPortis()
-    showWalletConnectionModal()
-  }
-
-  const initFortmatic = () => {
-    props.initFortmatic()
     showWalletConnectionModal()
   }
 
@@ -159,15 +153,6 @@ function WalletConnection(props: WalletContainerProps) {
               icon={TrezorMetamaskLogo}
               faqUrl={WALLET_LEARN_MORE_LINKS.LEDGER}
               onConnect={initTrezor}
-            />
-            <WalletItem
-              textColor={widgetPrimaryColor}
-              noBorder={scrollIndex === 1}
-              name="Fortmatic"
-              description="Fortmatic enables users to sign in to a security compliant wallet within seconds using a phone number and PIN code."
-              icon={FortmaticLogo}
-              faqUrl={WALLET_LEARN_MORE_LINKS.FORTMATIC}
-              onConnect={initFortmatic}
             />
             <WalletItem
               textColor={widgetPrimaryColor}

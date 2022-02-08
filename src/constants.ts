@@ -6,7 +6,6 @@ export const WALLET_LEARN_MORE_LINKS = {
   METAMASK: 'https://metamask.io/',
   WALLETLINK: 'https://www.walletlink.org/',
   LEDGER: 'https://support.ledger.com/hc/en-us',
-  FORTMATIC: 'https://fortmatic.com/',
   EQUAL: 'https://equal.tech/',
   PORTIS: 'https://www.portis.io/',
 }

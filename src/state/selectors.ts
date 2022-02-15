@@ -14,8 +14,8 @@ export const makeGetBalanceForToken = createSelector(
 
     // If ETH/WETH, return sum of the two
     if (combine && (tokenAddress === ETH_ADDRESS || tokenAddress === WETH_CONTRACT_ADDRESS)) {
-      return new BigNumber(walletBalance[ETH_ADDRESS])
-        .add(new BigNumber(walletBalance[WETH_CONTRACT_ADDRESS]))
+      return new BigNumber(walletBalance[ETH_ADDRESS] || '0')
+        .add(new BigNumber(walletBalance[WETH_CONTRACT_ADDRESS] || '0'))
         .toString()
     }
 

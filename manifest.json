@@ -3,6 +3,17 @@
   "name": "AirSwap OTC",
   "description": "Trustless OTC for Any Ethereum Token",
   "iconPath": "favicon.png",
+  "icons": [
+    {
+      "src": "favicon.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "providedBy": {
+    "name": "AirSwap",
+    "url": "https://www.airswap.io/"
+  },
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#2b71ff",

@@ -23,7 +23,7 @@ export interface ValidatedValue<T> {
   validate(newValue?: T): ValidationMessage | null
 }
 
-export default function createValidatedValue<T>(
+export default function CreateValidatedValue<T>(
   validators?: Validator<T>[],
   defaultValue?: T | null,
 ): [ValidatedValue<T>, (value: T) => void] {

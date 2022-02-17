@@ -53,7 +53,10 @@ export default function Input(props: InputProps) {
   const [previousValue, setPreviousValue] = useState(props.value)
   const [placeholderFontSize, setPlaceholderFontSize] = useState<number>(0)
   const placeholderRef = useRef<HTMLSpanElement>(null)
-  const inputRef = props.ref || useRef<HTMLInputElement>(null)
+  let inputRef = useRef<HTMLInputElement>(null)
+  if (props.ref) {
+    inputRef = props.ref
+  }
 
   let InputEl
 

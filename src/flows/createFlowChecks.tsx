@@ -43,7 +43,7 @@ const { getConnectedWalletAddress } = walletSelectors
 const { getConnectedSwapApprovals, getConnectedBalances } = balancesSelectors
 const { makeAtomicByToken, getTokensByAddress, makeDisplayByToken, getAirSwapApprovedTokens } = tokenSelectors
 
-export default function createFlowChecks() {
+export default function CreateFlowChecks() {
   const { setModalContent, setModalOpen, setModalSettings } = useContext(ModalContext)
   const { setShouldProgress, setIsFormSubmitting } = useContext(FormSubmitContext)
   const { startWalletConnect, setShowWalletConnect } = useContext(WalletContext)

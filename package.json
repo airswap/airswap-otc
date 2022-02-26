@@ -37,7 +37,7 @@
     "redux-devtools-extension": "^2.13.5"
   },
   "dependencies": {
-    "@airswap/protocols": "^0.4.8",
+    "@airswap/protocols": "2.0.0",
     "@airswap/types": "^3.5.11",
     "@types/ismobilejs": "^0.4.1",
     "@types/jest": "^24.0.13",

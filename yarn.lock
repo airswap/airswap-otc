@@ -2396,10 +2396,10 @@ aes-js@3.0.0:
   resolved "https://registry.yarnpkg.com/aes-js/-/aes-js-3.0.0.tgz#e21df10ad6c2053295bcbb8dab40b09dbea87e4d"
   integrity sha1-4h3xCtbCBTKVvLuNq0Cwnb6ofk0=
 
-airswap.js@0.2.22:
-  version "0.2.22"
-  resolved "https://registry.yarnpkg.com/airswap.js/-/airswap.js-0.2.22.tgz#29de9eabf6c44f8437c68808a5b0f4803aa10c84"
-  integrity sha512-0valo8o+2OLpQjo7UxDFw7zjYCaFrzeYLwvxfkPZKRv+ZYf8uvwDpdS9HYoooJZDePbH5QIAmF3pXl7NurQ5WA==
+airswap.js@0.2.23:
+  version "0.2.23"
+  resolved "https://registry.yarnpkg.com/airswap.js/-/airswap.js-0.2.23.tgz#808ca0c07b9025dd486b81ab9a7f4412717325db"
+  integrity sha512-eS7KDM8fo89gGN3niTD7W17xUd3Voq0/eDcV2snzmGOPg+QP2ytQXmVjeSAP/bOVyXKhcsiOVCmRkPZHHa4ntA==
   dependencies:
     "@airswap/constants" "^0.3.9"
     "@airswap/delegate" "^2.6.9"
@@ -2416,7 +2416,6 @@ airswap.js@0.2.22:
     eventsource "^1.0.7"
     fortmatic "^0.7.4"
     human-standard-token-abi "^2.0.0"
-    ipfs-mini "^1.1.5"
     ismobilejs "^0.5.1"
     isomorphic-fetch "^2.2.1"
     jayson "^3.1.2"
@@ -8573,13 +8572,6 @@ ipaddr.js@1.9.1, ipaddr.js@^1.5.2:
   version "1.9.1"
   resolved "https://registry.yarnpkg.com/ipaddr.js/-/ipaddr.js-1.9.1.tgz#bff38543eeb8984825079ff3a2a8e6cbd46781b3"
   integrity sha512-0KI/607xoxSToH7GjN1FfSbLoU0+btTicjsQSWQlh/hZykN8KpmMf7uYwPW3R+akZ6R/w18ZlXSHBYXiYUPO3g==
-
-ipfs-mini@^1.1.5:
-  version "1.1.5"
-  resolved "https://registry.yarnpkg.com/ipfs-mini/-/ipfs-mini-1.1.5.tgz#1ffd1f0b048814aabbdfa24c77cde255c5b11fc7"
-  integrity sha512-BzsoCa3V/gxN2eEHnyqggOdreAwnvbddj4jUvp6Q7jXuzXx9q5XakXe8mG8qV0bn4bMKdH/7BUDbiWBCEMuYBg==
-  dependencies:
-    xmlhttprequest "^1.8.0"
 
 is-absolute-url@^2.0.0:
   version "2.1.0"
@@ -17036,7 +17028,7 @@ xmlchars@^2.2.0:
   resolved "https://registry.yarnpkg.com/xmlchars/-/xmlchars-2.2.0.tgz#060fe1bcb7f9c76fe2a17db86a9bc3ab894210cb"
   integrity sha512-JZnDKK8B0RCDw84FNdDAIpZK+JuJw+s7Lz8nksI7SIuU3UXJJslUthsi+uWBUYOwPFwW7W7PRLRfUKpxjtjFCw==
 
-xmlhttprequest@1.8.0, xmlhttprequest@^1.8.0:
+xmlhttprequest@1.8.0:
   version "1.8.0"
   resolved "https://registry.yarnpkg.com/xmlhttprequest/-/xmlhttprequest-1.8.0.tgz#67fe075c5c24fef39f9d65f5f7b7fe75171968fc"
   integrity sha1-Z/4HXFwk/vOfnWX197f+dRcZaPw=

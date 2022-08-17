@@ -52,7 +52,7 @@
     "@types/styled-components": "^4.1.16",
     "@typescript-eslint/eslint-plugin": "^1.9.0",
     "@typescript-eslint/parser": "^1.9.0",
-    "airswap.js": "0.2.24",
+    "airswap.js": "0.2.25",
     "babel-loader": "8.0.4",
     "babel-plugin-react-intl-auto": "^1.7.0",
     "babel-plugin-transform-remove-console": "^6.9.4",
